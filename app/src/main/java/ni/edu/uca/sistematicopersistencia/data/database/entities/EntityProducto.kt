@@ -9,10 +9,10 @@ data class EntityProducto(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     @ColumnInfo("nombreProd")
-    val nombre: String?,
+    val nombre: String,
     @ColumnInfo("precioProd")
-    val precio: Double?,
+    val precio: String,
     @ColumnInfo("existProd")
-    val existencia: Int?
+    val existencia: String
 
 )
