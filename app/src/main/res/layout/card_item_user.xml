@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#2196F3"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/tvNombreProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:text="Nombre Producto" />
+
+        <TextView
+            android:id="@+id/tvPrecioProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C1BEBE"
+            android:textSize="20sp"
+            tools:text="Precio Producto" />
+
+        <TextView
+            android:id="@+id/tvExitenciaProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C1BEBE"
+            android:textSize="20sp"
+            tools:text="Exictencia Producto" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
