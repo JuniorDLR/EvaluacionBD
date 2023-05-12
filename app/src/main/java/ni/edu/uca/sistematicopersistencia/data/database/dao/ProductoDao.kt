@@ -7,7 +7,7 @@ import ni.edu.uca.sistematicopersistencia.data.database.entities.EntityProducto
 @Dao
 interface ProductoDao {
     @Query("SELECT * FROM TblProducto")
-    fun obtRegistos(u: EntityProducto): Flow<List<EntityProducto>>
+    suspend fun obtRegistos(): List<EntityProducto>
 
     @Query("SELECT * FROM TblProducto WHERE id= :id")
     fun obtRegistro(id:Int):Flow<EntityProducto>
@@ -20,5 +20,4 @@ interface ProductoDao {
 
     @Delete
     suspend fun eliminarReg(producto: EntityProducto)
-
 }

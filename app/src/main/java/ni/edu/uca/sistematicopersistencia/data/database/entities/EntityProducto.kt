@@ -11,8 +11,8 @@ data class EntityProducto(
     @ColumnInfo("nombreProd")
     val nombre: String,
     @ColumnInfo("precioProd")
-    val precio: String,
+    val precio: Double?,
     @ColumnInfo("existProd")
-    val existencia: String
+    val existencia: Int?
 
 )

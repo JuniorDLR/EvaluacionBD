@@ -7,13 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ni.edu.uca.sistematicopersistencia.data.database.entities.EntityProducto
 
+
 class Adapter() : RecyclerView.Adapter<Adapter.ViewHolder>() {
     val lista = mutableListOf<EntityProducto>()
+
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nombreP = itemView.findViewById<TextView>(R.id.tvNombreProd)
         val precioP = itemView.findViewById<TextView>(R.id.tvPrecioProd)
-        val existenciaP = itemView.findViewById<TextView>(R.id.tvPrecioProd)
+        val existenciaP = itemView.findViewById<TextView>(R.id.tvExitenciaProd)
 
 
     }
@@ -28,7 +30,12 @@ class Adapter() : RecyclerView.Adapter<Adapter.ViewHolder>() {
         val listP = lista[position]
         holder.nombreP.text = listP.nombre
         holder.existenciaP.text = listP.existencia.toString()
-        holder.precioP.text = listP.precio.toInt().toString()
+        holder.precioP.text = if (listP.precio != null) {
+            listP.precio.toInt().toString()
+        } else {
+            ""
+        }
+
     }
 
     override fun getItemCount(): Int {
